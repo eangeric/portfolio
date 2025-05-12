@@ -1,3 +1,15 @@
+// import Navbar from "./components/Navbar";
+import About from "./sections/About";
+import Home from "./sections/Home";
+import Projects from "./sections/Projects";
+
 export default function App() {
-  return <div>App</div>;
+  return (
+    <>
+      {/* <Navbar /> */}
+      <Home />
+      <About />
+      <Projects />
+    </>
+  );
 }
