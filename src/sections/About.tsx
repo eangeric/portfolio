@@ -2,7 +2,7 @@ export default function About() {
   return (
     <div
       id="about"
-      className="min-h-screen text-white flex justify-center items-center px-6 py-12"
+      className="min-h-screen text-white flex justify-center items-center px-12 py-12"
     >
       <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Image Placeholder */}

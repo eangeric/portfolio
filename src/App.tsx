@@ -13,7 +13,7 @@ export default function App() {
       </div>
 
       {/* Sections */}
-      <section className="">
+      <section className="p-4">
         <Hero />
         <About />
         <Skills />

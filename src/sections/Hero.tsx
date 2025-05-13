@@ -6,9 +6,21 @@ import {
   FaDownload,
 } from "react-icons/fa6";
 import Navbar from "../components/Navbar";
+import { useEffect, useState } from "react";
 export default function Hero() {
+  const [showCaret, setShowCaret] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowCaret(window.scrollY < 100); // hide if scrolled down more than 20px
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="h-screen flex flex-col">
+    <div id="home" className="h-dvh flex flex-col">
       <Navbar />
       <div className="flex flex-col justify-center items-center text-center flex-grow mt-20">
         <h1 className="text-7xl font-extrabold">
@@ -43,10 +55,16 @@ export default function Hero() {
         </div>
         <button className="border-2 border-white text-lg flex gap-2 items-center justify-center bg-transparent px-8 py-2 rounded-2xl cursor-pointer hover:bg-blue-500 hover:underline transition-colors">
           <FaDownload className="" />
-          Download Resume
+          <a href="/resume.pdf" download="Eric_Eang_Resume">
+            Download Resume
+          </a>
         </button>
       </div>
-      <div className="flex justify-center mt-auto mb-8">
+      <div
+        className={`${
+          showCaret ? "opacity-100" : "opacity-0"
+        } flex justify-center mt-auto mb-8 transition-opacity ease-in-out duration-300`}
+      >
         <FaCaretDown className="size-12 animate-bounce" />
       </div>
     </div>
