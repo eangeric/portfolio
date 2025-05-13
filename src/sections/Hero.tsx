@@ -41,7 +41,7 @@ export default function Hero() {
             <FaInstagram className="hover:text-blue-500 transition-colors" />
           </a>
         </div>
-        <button className="border-2 border-white text-lg flex gap-2 items-center justify-center bg-blue-500 px-8 py-2 rounded-2xl cursor-pointer hover:bg-blue-600 hover:underline transition-colors">
+        <button className="border-2 border-white text-lg flex gap-2 items-center justify-center bg-transparent px-8 py-2 rounded-2xl cursor-pointer hover:bg-blue-500 hover:underline transition-colors">
           <FaDownload className="" />
           Download Resume
         </button>

@@ -9,7 +9,7 @@ export default function About() {
         <img src="/anteater.png" className="max-h-128" />
 
         {/* About Content */}
-        <div>
+        <div className="text-center sm:text-left ">
           <h2 className="text-4xl font-bold mb-4">About Me</h2>
           <p className="text-lg mb-4">
             I specialize in full stack development. The best part of programming
