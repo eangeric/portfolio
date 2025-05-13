@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 import {
   FaLinkedin,
   FaGithub,
@@ -6,11 +5,12 @@ import {
   FaCaretDown,
   FaDownload,
 } from "react-icons/fa6";
+import Navbar from "../components/Navbar";
 export default function Hero() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <section className="flex flex-col justify-center items-center text-center flex-grow mt-20">
+      <div className="flex flex-col justify-center items-center text-center flex-grow mt-20">
         <h1 className="text-7xl font-extrabold">
           Hi I'm <span className="text-blue-500">Eric</span>
         </h1>
@@ -41,11 +41,11 @@ export default function Hero() {
             <FaInstagram className="hover:text-blue-500 transition-colors" />
           </a>
         </div>
-        <button className="border-2 border-white text-lg flex gap-2 items-center justify-center bg-blue-500 px-8 py-2 rounded-2xl cursor-pointer hover:bg-blue-600 transition-colors">
+        <button className="border-2 border-white text-lg flex gap-2 items-center justify-center bg-blue-500 px-8 py-2 rounded-2xl cursor-pointer hover:bg-blue-600 hover:underline transition-colors">
           <FaDownload className="" />
           Download Resume
         </button>
-      </section>
+      </div>
       <div className="flex justify-center mt-auto mb-8">
         <FaCaretDown className="size-12 animate-bounce" />
       </div>

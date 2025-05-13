@@ -3,4 +3,14 @@
 
 @theme {
   --font-nunito: "Nunito", sans-serif;
+  --animate-pan: pan 45s linear infinite;
+
+  @keyframes pan {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 0%;
+    }
+  }
 }

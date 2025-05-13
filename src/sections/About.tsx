@@ -6,31 +6,25 @@ export default function About() {
     >
       <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Image Placeholder */}
-        <img src="/anteater.png" className="h-128" />
+        <img src="/anteater.png" className="max-h-128" />
 
         {/* About Content */}
         <div>
           <h2 className="text-4xl font-bold mb-4">About Me</h2>
           <p className="text-lg mb-4">
-            The best part of programming for me is building things from scratch
-            and being able to see it come to life. It's a powerful feeling to
-            make something real from just an idea.
+            I specialize in full stack development. The best part of programming
+            for me is building things from scratch and being able to see it come
+            to life. It's a powerful feeling to make something real from just an
+            idea.
           </p>
           <ul className="space-y-2 text-gray-300 text-lg">
             <li>
               <span className="font-semibold text-white">🎓 School:</span>{" "}
-              University of California, Irvine Class of 2025
+              University of California, Irvine
             </li>
             <li>
-              <span className="font-semibold text-white">💻 Focus:</span> Full
-              Stack Web Development
-            </li>
-            <li>
-              <span className="font-semibold text-white">
-                ⚙️ Preferred Tech:
-              </span>{" "}
-              React, Next.js, Node.js, Express, Supabase, PostgreSQL, Tailwind
-              CSS
+              <span className="font-semibold text-white">🖥️ Major:</span>{" "}
+              Computer Science, Information Specialization
             </li>
             <li>
               <span className="font-semibold text-white">📍 Location:</span>{" "}
