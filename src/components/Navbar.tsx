@@ -1,31 +1,21 @@
-import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa6";
 export default function Navbar() {
+  const navLinks = [
+    { href: "#about", label: "About Me" },
+    { href: "#skills", label: "Skills" },
+    { href: "#projects", label: "Projects" },
+    { href: "#contact", label: "Contact" },
+  ];
+
+  const linkStyle =
+    "w-28 text-nowrap flex justify-center bg-linear-to-b from-white to-gray-300 text-blue-500 px-4 py-1 rounded-2xl border-blue-500 border-2 hover:bg-blue-50 transition";
+
   return (
-    <nav className="flex items-center justify-center m-8 gap-x-12 text-3xl">
-      <a
-        href="https://www.linkedin.com/in/eric-eang-57643b246/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Linkedin"
-      >
-        <FaLinkedin />
-      </a>
-      <a
-        href="https://github.com/eangeric"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Linkedin"
-      >
-        <FaGithub />
-      </a>
-      <a
-        href="https://www.instagram.com/pipknight3/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Linkedin"
-      >
-        <FaInstagram />
-      </a>
+    <nav className="flex justify-end items-center m-4 text-xl gap-8">
+      {navLinks.map(({ href, label }) => (
+        <a key={label} href={href} className={linkStyle}>
+          {label}
+        </a>
+      ))}
     </nav>
   );
 }
