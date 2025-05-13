@@ -14,8 +14,8 @@ export default function About() {
           <p className="text-lg mb-4">
             I specialize in full stack development. The best part of programming
             for me is building things from scratch and being able to see it come
-            to life. It's a powerful feeling to make something real from just an
-            idea.
+            to life. It's a powerful feeling to turn an idea into something
+            real.
           </p>
           <ul className="space-y-2 text-gray-300 text-lg">
             <li>
