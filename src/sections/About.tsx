@@ -10,7 +10,9 @@ export default function About() {
 
         {/* About Content */}
         <div className="text-center sm:text-left ">
-          <h2 className="text-4xl font-bold mb-4">About Me</h2>
+          <h2 className="text-4xl font-bold mb-4 underline underline-offset-6 decoration-blue-500">
+            About Me
+          </h2>
           <p className="text-lg mb-4">
             I specialize in full stack development. The best part of programming
             for me is building things from scratch and being able to see it come
