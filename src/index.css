@@ -4,6 +4,7 @@
 @theme {
   --font-nunito: "Nunito", sans-serif;
   --animate-pan: pan 45s linear infinite;
+  --animate-enter: enter 0.3s ease-in;
 
   @keyframes pan {
     0% {
@@ -11,6 +12,15 @@
     }
     100% {
       background-position: 100% 0%;
+    }
+  }
+
+  @keyframes enter {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 }

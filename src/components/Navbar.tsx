@@ -3,20 +3,17 @@ import { FaBars, FaXmark } from "react-icons/fa6";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  // Disable body scrolling when menu is open
+  // Track scroll position
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-
-    // Cleanup function to restore scrolling when component unmounts
-    return () => {
-      document.body.style.overflow = "auto";
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
     };
-  }, [isOpen]);
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
     { href: "#about", label: "About" },
@@ -32,17 +29,21 @@ export default function Navbar() {
       <div className="relative">
         {isOpen ? (
           <FaXmark
-            className="xl:hidden flex justify-end items-center fixed top-4 right-4 text-3xl z-20 animate-enter"
+            className={`${
+              scrolled ? "flex" : "xl:hidden flex"
+            } justify-end items-center fixed top-4 right-4 text-3xl z-20 animate-enter`}
             onClick={() => setIsOpen((prev) => !prev)}
           />
         ) : (
           <FaBars
-            className="xl:hidden flex justify-end items-center fixed top-4 right-4 text-3xl z-20 animate-enter"
+            className={`${
+              scrolled ? "flex" : "xl:hidden flex"
+            } justify-end items-center fixed top-4 right-4 text-3xl z-20 animate-enter`}
             onClick={() => setIsOpen((prev) => !prev)}
           />
         )}
         {isOpen && (
-          <nav className="w-full sm:w-64 xl:hidden flex flex-col justify-start items-center fixed top-0 right-0 h-screen text-xl bg-black z-10 pt-20 animate-enter overflow-y-auto ">
+          <nav className="w-full sm:w-64 flex flex-col justify-start items-center fixed top-0 right-0 h-screen text-xl bg-gray-900 z-10 pt-20 animate-enter overflow-y-auto ">
             {sideBarLinks.map(({ href, label }) => (
               <a
                 key={label}
