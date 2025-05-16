@@ -11,8 +11,8 @@ export default function SkillsCard({ type, skills, className }: SkillsCard) {
     >
       <h1 className="text-blue-500 text-3xl font-bold">{type}</h1>
       <div className="flex flex-col gap-4">
-        {skills.map((skill) => (
-          <div className="flex items-center gap-4 text-xl">
+        {skills.map((skill, index) => (
+          <div key={index} className="flex items-center gap-4 text-xl">
             <div className="text-blue-500">{skill.icon}</div>
             <div>{skill.name}</div>
           </div>

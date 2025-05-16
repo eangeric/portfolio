@@ -20,7 +20,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div id="home" className="h-dvh flex flex-col">
+    <div id="home" className="min-h-screen flex flex-col">
       <Navbar />
       <div className="flex flex-col justify-center items-center text-center flex-grow mt-20">
         <h1 className="text-7xl font-extrabold">
