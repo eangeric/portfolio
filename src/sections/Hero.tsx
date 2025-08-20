@@ -14,7 +14,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="min-h-dvh flex flex-col snap-start">
+    <div className="min-h-dvh flex flex-col">
       <Navbar />
       <div className="flex flex-col justify-center items-center text-center flex-grow mt-20">
         <h1 className="text-7xl font-extrabold">

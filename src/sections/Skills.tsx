@@ -87,7 +87,7 @@ export default function Skills() {
   return (
     <div
       id="skills"
-      className="min-h-screen flex justify-center items-center mt-32 md:mt-0 snap-start"
+      className="min-h-screen flex justify-center items-center mt-32 md:mt-0 "
     >
       <div>
         <h1 className="flex justify-center text-4xl font-bold mb-8 underline underline-offset-6 decoration-blue-500">
