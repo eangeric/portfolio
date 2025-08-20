@@ -2,7 +2,7 @@ export default function About() {
   return (
     <div
       id="about"
-      className="min-h-screen text-white flex justify-center items-center px-12 py-12"
+      className="min-h-screen text-white flex justify-center items-center px-12 py-12 snap-start"
     >
       <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Image Placeholder */}
@@ -14,10 +14,9 @@ export default function About() {
             About Me
           </h2>
           <p className="text-lg mb-4">
-            I specialize in full stack development. The best part of programming
-            for me is building things from scratch and being able to see it come
-            to life. It's a powerful feeling to turn an idea into something
-            real.
+            I love doing full stack development. The best part is building
+            things from scratch and being able to see it come to life. It is a
+            powerful feeling to turn an idea into something real.
           </p>
           <ul className="space-y-2 text-gray-300 text-lg">
             <li>

@@ -1,10 +1,4 @@
-import {
-  FaLinkedin,
-  FaGithub,
-  FaInstagram,
-  FaCaretDown,
-  FaDownload,
-} from "react-icons/fa6";
+import { FaLinkedin, FaGithub, FaCaretDown, FaDownload } from "react-icons/fa6";
 import Navbar from "../components/Navbar";
 import { useEffect, useState } from "react";
 export default function Hero() {
@@ -20,7 +14,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="min-h-dvh flex flex-col">
+    <div className="min-h-dvh flex flex-col snap-start">
       <Navbar />
       <div className="flex flex-col justify-center items-center text-center flex-grow mt-20">
         <h1 className="text-7xl font-extrabold">
@@ -43,14 +37,6 @@ export default function Hero() {
             aria-label="Linkedin"
           >
             <FaGithub className="hover:text-blue-500 transition-colors" />
-          </a>
-          <a
-            href="https://www.instagram.com/pipknight3/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Linkedin"
-          >
-            <FaInstagram className="hover:text-blue-500 transition-colors" />
           </a>
         </div>
         <button className="border-2 border-white text-lg flex gap-2 items-center justify-center bg-transparent px-8 py-2 rounded-2xl cursor-pointer hover:bg-blue-500 hover:underline transition-colors">

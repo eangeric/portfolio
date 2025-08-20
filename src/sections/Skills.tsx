@@ -3,16 +3,16 @@ import {
   SiExpress,
   SiGit,
   SiGithub,
+  SiKubernetes,
   SiLinux,
   SiMongodb,
-  SiNetlify,
   SiNextdotjs,
+  SiNginx,
   SiNodedotjs,
   SiPostman,
   SiReact,
   SiTailwindcss,
   SiTypescript,
-  SiVercel,
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa6";
 import SkillsCard from "../components/SkillsCard";
@@ -56,14 +56,15 @@ export default function Skills() {
       name: "AWS",
       icon: <FaAws />,
     },
-    { name: "Vercel", icon: <SiVercel /> },
-    {
-      name: "Netlify",
-      icon: <SiNetlify />,
-    },
+    { name: "Nginx", icon: <SiNginx /> },
+
     {
       name: "Docker",
       icon: <SiDocker />,
+    },
+    {
+      name: "Kubernetes",
+      icon: <SiKubernetes />,
     },
   ];
 
@@ -86,7 +87,7 @@ export default function Skills() {
   return (
     <div
       id="skills"
-      className="min-h-screen flex justify-center items-center mt-32 md:mt-0"
+      className="min-h-screen flex justify-center items-center mt-32 md:mt-0 snap-start"
     >
       <div>
         <h1 className="flex justify-center text-4xl font-bold mb-8 underline underline-offset-6 decoration-blue-500">

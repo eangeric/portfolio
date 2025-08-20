@@ -13,7 +13,10 @@ export default function App() {
       </div>
 
       {/* Sections */}
-      <section id="home" className="p-4">
+      <section
+        id="home"
+        className="p-4 h-screen overflow-y-scroll scroll-smooth snap-y snap-mandatory"
+      >
         <Hero />
         <About />
         <Skills />
