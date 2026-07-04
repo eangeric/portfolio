@@ -42,8 +42,6 @@ export default function Hero() {
               >
                 View Skills
               </a>
-            </div>
-            <div className="mt-5 flex items-center justify-center gap-3 text-2xl">
               <a
                 href="https://www.linkedin.com/in/eric-eang-57643b246/"
                 target="_blank"
