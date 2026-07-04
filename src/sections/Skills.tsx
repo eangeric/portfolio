@@ -100,9 +100,9 @@ export default function Skills() {
   return (
     <div
       id="skills"
-      className="min-h-screen flex justify-center items-center py-24"
+      className="flex min-h-dvh items-center justify-center py-24"
     >
-      <div className="w-full max-w-6xl">
+      <div className="w-full max-w-6xl animate-fade-up">
         <div className="mx-auto mb-12 max-w-3xl text-center">
           <p className="text-5xl font-extrabold text-blue-300 sm:text-6xl">
             Skills

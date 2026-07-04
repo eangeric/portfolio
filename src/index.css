@@ -1,17 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 @import "tailwindcss";
 
+html,
+body,
+#root {
+  min-height: 100%;
+  background: #00091d;
+}
+
+body {
+  margin: 0;
+}
+
+::selection {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 4px;
+}
+
 @theme {
   --font-nunito: "Nunito", sans-serif;
   --animate-pan: pan 45s linear infinite;
   --animate-enter: enter 0.3s ease-in;
+  --animate-fade-up: fade-up 0.7s ease-out both;
+  --animate-popover: popover 0.18s ease-out both;
 
   @keyframes pan {
     0% {
       background-position: 0% 0%;
     }
     100% {
-      background-position: 100% 0%;
+      background-position: 100% 100%;
     }
   }
 
@@ -22,5 +51,38 @@
     to {
       opacity: 1;
     }
+  }
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes popover {
+    from {
+      opacity: 0;
+      transform: translateY(-6px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
