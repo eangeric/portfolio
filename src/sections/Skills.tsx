@@ -1,103 +1,118 @@
 import {
+  SiAndroidstudio,
+  SiAppium,
   SiDocker,
-  SiExpress,
   SiGit,
-  SiGithub,
-  SiKubernetes,
-  SiLinux,
-  SiMongodb,
-  SiNextdotjs,
-  SiNginx,
-  SiNodedotjs,
+  SiJavascript,
   SiPostman,
-  SiReact,
-  SiTailwindcss,
-  SiTypescript,
+  SiPytest,
+  SiPython,
+  SiSelenium,
+  SiXcode,
 } from "react-icons/si";
-import { FaAws } from "react-icons/fa6";
+import {
+  FaBug,
+  FaCode,
+  FaDatabase,
+  FaFileLines,
+  FaListCheck,
+  FaPenToSquare,
+} from "react-icons/fa6";
 import SkillsCard from "../components/SkillsCard";
-import { BiLogoPostgresql } from "react-icons/bi";
 
 export default function Skills() {
-  const frontend = [
+  const languages = [
     {
-      name: "React",
-      icon: <SiReact />,
-    },
-    { name: "Next.js", icon: <SiNextdotjs /> },
-    {
-      name: "TypeScript",
-      icon: <SiTypescript />,
+      name: "Python",
+      icon: <SiPython />,
     },
     {
-      name: "Tailwind CSS",
-      icon: <SiTailwindcss />,
-    },
-  ];
-
-  const backend = [
-    {
-      name: "Node.js",
-      icon: <SiNodedotjs />,
-    },
-    { name: "Express.js", icon: <SiExpress /> },
-    {
-      name: "MongoDB",
-      icon: <SiMongodb />,
+      name: "JavaScript",
+      icon: <SiJavascript />,
     },
     {
-      name: "PostgreSQL",
-      icon: <BiLogoPostgresql />,
+      name: "Java",
+      icon: <FaCode />,
+    },
+    {
+      name: "SQL",
+      icon: <FaDatabase />,
     },
   ];
 
-  const devOps = [
-    {
-      name: "AWS",
-      icon: <FaAws />,
-    },
-    { name: "Nginx", icon: <SiNginx /> },
-
-    {
-      name: "Docker",
-      icon: <SiDocker />,
-    },
-    {
-      name: "Kubernetes",
-      icon: <SiKubernetes />,
-    },
-  ];
-
-  const tools = [
+  const developerTools = [
     {
       name: "Git",
       icon: <SiGit />,
     },
     {
-      name: "Linux",
-      icon: <SiLinux />,
+      name: "Docker",
+      icon: <SiDocker />,
     },
-    { name: "Github", icon: <SiGithub /> },
+    {
+      name: "Xcode",
+      icon: <SiXcode />,
+    },
+    {
+      name: "Android Studio",
+      icon: <SiAndroidstudio />,
+    },
+  ];
+
+  const qaSkills = [
+    {
+      name: "Manual Testing",
+      icon: <FaListCheck />,
+    },
+    {
+      name: "Test Cases",
+      icon: <FaPenToSquare />,
+    },
+    {
+      name: "Test Plans",
+      icon: <FaFileLines />,
+    },
+    {
+      name: "Bug Reporting",
+      icon: <FaBug />,
+    },
+  ];
+
+  const testingTools = [
+    {
+      name: "Appium",
+      icon: <SiAppium />,
+    },
+    {
+      name: "Selenium",
+      icon: <SiSelenium />,
+    },
     {
       name: "Postman",
       icon: <SiPostman />,
+    },
+    {
+      name: "Pytest",
+      icon: <SiPytest />,
     },
   ];
 
   return (
     <div
       id="skills"
-      className="min-h-screen flex justify-center items-center mt-32 md:mt-0 "
+      className="min-h-screen flex justify-center items-center py-24"
     >
-      <div>
-        <h1 className="flex justify-center text-4xl font-bold mb-8 underline underline-offset-6 decoration-blue-500">
-          My Skills
-        </h1>
-        <div className="grid  grid-cols-1 sm:grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-8">
-          <SkillsCard type="Frontend" skills={frontend} />
-          <SkillsCard type="Backend" skills={backend} />
-          <SkillsCard type="DevOps" skills={devOps} />
-          <SkillsCard type="Tools" skills={tools} />
+      <div className="w-full max-w-6xl">
+        <div className="mx-auto mb-12 max-w-3xl text-center">
+          <p className="text-5xl font-extrabold text-blue-300 sm:text-6xl">
+            Skills
+          </p>
+        </div>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <SkillsCard type="Languages" skills={languages} />
+          <SkillsCard type="Developer Tools" skills={developerTools} />
+          <SkillsCard type="QA Skills" skills={qaSkills} />
+          <SkillsCard type="Testing Tools" skills={testingTools} />
         </div>
       </div>
     </div>
